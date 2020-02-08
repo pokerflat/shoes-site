@@ -2,19 +2,20 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 
 module.exports = {
-  entry: './src/index.js',
-  mode:'development',
+  entry: './index.js',
+  
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, '../dist'),
     hot: true,
     port: 5500
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve("../", 'dist'),
     filename: 'bundle.js'
   },
   module: {
@@ -34,11 +35,36 @@ module.exports = {
                }
              ]
         
-      }
+      },
+
+      {
+        test: /\.(png|svg|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+
+      
+
     ]
   },
   
   plugins: [
-    new MiniCssExtractPlugin('./css/style.css'),
-    new webpack.HotModuleReplacementPlugin()   ]
+    new MiniCssExtractPlugin('./scss/base.scss'),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: __dirname + "/index.html" })
+  
+
+  ]
 };

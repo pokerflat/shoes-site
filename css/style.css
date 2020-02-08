@@ -60,7 +60,6 @@
   }
 
   .wrapper_main{  
-    background-size: cover;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -85,41 +84,27 @@
   .header_wrapper{
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-end;
-      /*justify-content: flex-end; */
+      align-items: center;
       padding-top: 61px;
   }
 
   .header_list{
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-end;}
-
-    .header_nav{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    
-
+    align-items: center;
   }
+
 
   .header_item{
       margin-right: 40px;
-   
+     }
 
-  }
-
-  .header_item:last-child{
-      margin-right: 0;
-  }
 
   .header_link{
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.03em;  
     color: #212121;
-    text-decoration: none;
-   
+    text-decoration: none;   
 
   }
 
@@ -134,7 +119,6 @@ color: #212121;
 text-decoration: none;
 margin-bottom: 17px;
 
-
   }
 
   .header_link:hover, .header_link:active{
@@ -142,26 +126,48 @@ margin-bottom: 17px;
 
   }
 
+  .cart_all{
+    margin-left: 101px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+
+  }
+
+    .cart{
+      margin-right: 15px;
+  
+    }
+
+    .cart_five{
+      width: 45.75px;
+      height: 17px;
+      display: none;
+
+    }
+
+    .cart_all:hover .cart_five{
+      display:inherit;
+      transition: 1s;
+    }
+
    /*header style end*/
 
     /*sale style start*/
 
-    .sale {
-  
+    .sale {  
         padding-top: 138px;
         display: flex;
-        margin-bottom: 207px;
- 
+        margin-bottom: 207px; 
     }
 
-    .sale_title{
-      
+    .sale_title{      
     font-size: 30px;
     line-height: 37px;
     letter-spacing: 0.02em;
     color: #000000;
     margin-bottom: 35px;
-
     }
 
     .sale_subtitle{
@@ -179,11 +185,8 @@ margin-bottom: 17px;
     .sale_models{
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 105px;
-       
-
+        margin-bottom: 105px;    
     }
-
 
     .sale_models_submit{
         width:240px;
@@ -203,24 +206,57 @@ margin-bottom: 17px;
      
         background:rgb(206, 181, 163);
     }
+
+    .prices{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .first_price{
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.05em;
+      text-decoration-line: line-through;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 14px;
+      position: absolute;
+
+    }
+
+    .second_price{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 51px;
+      text-align: right;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #D84033;
+      position: absolute;
+      top:300px;
+    }
+ 
+
+    .boot{
+      position	: relative;
+    }
+
      /*sale style end*/
 
        /*footer style start*/
 
-       .footer{
+    .footer{
            
-           max-width: 100%;
-                   /* max-width: 1110px; */
-                   background-color:#212121;
-                   margin: 0 auto;
-                  /* box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);*/
-                   position: relative;
-       }
+     max-width: 100%;               
+     background-color:#212121;
+     margin: 0 auto;             
+     position: relative;
+       }  
 
-   
-
-       .footer_delivery{
-      
+       .footer_delivery{    
      
         font-size: 30px;
         line-height: 37px;          
@@ -229,11 +265,7 @@ margin-bottom: 17px;
         color: #FFFFFF;
         text-transform: uppercase;
         padding-top: 80px;
-        margin-bottom: 23px;
-    
-    
-         
-              
+        margin-bottom: 23px;                 
        }
 
        .footer_gift{
@@ -241,44 +273,11 @@ margin-bottom: 17px;
         line-height: 26px;     
         text-align: center;        
         color: #FFFFFF;
-        padding-bottom: 69px;
+        padding-bottom: 68px;
        }
-
-
-
-    }
-
        /*footer style end*/
 
        
 
-       /*media start*/
-
-
-       @media screen and (max-width: 767px) {
-
- 
-        
-        .sale {
-            padding-top: 125px;
-        }
-        .sale_title {
-            font-size: 32px;
-            line-height: 48px;
-        }
-        .sale_subtitle {
-            font-size: 14px;
-        }
-    
-        .footer{
-            margin-bottom: 36px;
-        }
-
-        
-   
-        
-    
-
-       /*media end*/
 
        
